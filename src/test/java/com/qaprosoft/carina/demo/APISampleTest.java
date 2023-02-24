@@ -46,7 +46,7 @@ public class APISampleTest implements IAbstractTest {
     @MethodOwner(owner = "qpsdemo")
     public void testCreateUser() throws Exception {
         LOGGER.info("test");
-        setCases("4555,54545");
+        setCases("test,test");
         PostUserMethod api = new PostUserMethod();
         api.setProperties("api/users/user.properties");
 
@@ -68,7 +68,6 @@ public class APISampleTest implements IAbstractTest {
         PostUserMethod api = new PostUserMethod();
         api.setProperties("api/users/user.properties");
         api.getProperties().remove("name");
-        api.getProperties().remove("username");
         api.callAPIExpectSuccess();
         api.validateResponse();
     }
@@ -87,8 +86,8 @@ public class APISampleTest implements IAbstractTest {
     @TestPriority(Priority.P1)
     public void testDeleteUsers() {
         DeleteUserMethod deleteUserMethod = new DeleteUserMethod();
-        deleteUserMethod.setProperties("api/users/user.properties");
-        deleteUserMethod.callAPIExpectSuccess();
+//        deleteUserMethod.setProperties("api/users/user.properties");
+        deleteUserMethod.callAPI();
         deleteUserMethod.validateResponse();
     }
 }

@@ -67,5 +67,4 @@ public class CarinaDescriptionPage extends CarinaDescriptionPageBase {
     public boolean isPageOpened() {
         return webViewContent.isElementPresent();
     }
-
 }

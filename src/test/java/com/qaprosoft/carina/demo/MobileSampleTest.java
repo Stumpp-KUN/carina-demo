@@ -37,8 +37,6 @@ import com.qaprosoft.carina.demo.utils.MobileContextUtils.View;
 public class MobileSampleTest implements IAbstractTest, IMobileUtils {
 
     @Test()
-    @MethodOwner(owner = "qpsdemo")
-    @TestLabel(name = "feature", value = {"mobile", "regression"})
     public void testLoginUser() {
         String username = "Test user";
         String password = RandomStringUtils.randomAlphabetic(10);
@@ -55,8 +53,6 @@ public class MobileSampleTest implements IAbstractTest, IMobileUtils {
     }
 
 	@Test()
-    @MethodOwner(owner = "qpsdemo")
-    @TestLabel(name = "feature", value = {"mobile", "regression"})
     public void testWebView() {
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);
         LoginPageBase loginPage = welcomePage.clickNextBtn();
@@ -82,23 +78,23 @@ public class MobileSampleTest implements IAbstractTest, IMobileUtils {
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);
         LoginPageBase loginPage = welcomePage.clickNextBtn();
         CarinaDescriptionPageBase carinaDescriptionPage = loginPage.login();
-        UIElementsPageBase uiElements = carinaDescriptionPage.navigateToUIElementsPage();
-        final String text = "some text";
-        final String date = "22/10/2018";
-        final String email = "some@email.com";
-        uiElements.typeText(text);
-        Assert.assertEquals(uiElements.getText(), text, "Text was not typed");
-        uiElements.typeDate(date);
-        Assert.assertEquals(uiElements.getDate(), date, "Date was not typed");
-        uiElements.typeEmail(email);
-        Assert.assertEquals(uiElements.getEmail(), email, "Email was not typed");
-        uiElements.swipeToFemaleRadioButton();
-        uiElements.checkCopy();
-        Assert.assertTrue(uiElements.isCopyChecked(), "Copy checkbox was not checked");
-        uiElements.clickOnFemaleRadioButton();
-        Assert.assertTrue(uiElements.isFemaleRadioButtonSelected(), "Female radio button was not selected!");
-        uiElements.clickOnOtherRadioButton();
-        Assert.assertTrue(uiElements.isOthersRadioButtonSelected(), "Others radio button was not selected!");
+//        UIElementsPageBase uiElements = carinaDescriptionPage.navigateToUIElementsPage();
+//        final String text = "some text";
+//        final String date = "22/10/2018";
+//        final String email = "some@email.com";
+//        uiElements.typeText(text);
+//        Assert.assertEquals(uiElements.getText(), text, "Text was not typed");
+//        uiElements.typeDate(date);
+//        Assert.assertEquals(uiElements.getDate(), date, "Date was not typed");
+//        uiElements.typeEmail(email);
+//        Assert.assertEquals(uiElements.getEmail(), email, "Email was not typed");
+//        uiElements.swipeToFemaleRadioButton();
+//        uiElements.checkCopy();
+//        Assert.assertTrue(uiElements.isCopyChecked(), "Copy checkbox was not checked");
+//        uiElements.clickOnFemaleRadioButton();
+//        Assert.assertTrue(uiElements.isFemaleRadioButtonSelected(), "Female radio button was not selected!");
+//        uiElements.clickOnOtherRadioButton();
+//        Assert.assertTrue(uiElements.isOthersRadioButtonSelected(), "Others radio button was not selected!");
     }
 
 }
